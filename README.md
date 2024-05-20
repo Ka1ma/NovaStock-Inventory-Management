@@ -35,7 +35,7 @@ Installation
 
 1.  Clone the repository to your local machine:
 
-    `git clone https://github.com/yourusername/novastock.git`
+    `git clone https://github.com/Ka1ma/NovaStock-Inventory-Management.git`
 
 2.  Install the required Python packages:
 
