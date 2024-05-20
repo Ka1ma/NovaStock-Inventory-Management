@@ -7,13 +7,13 @@ Screenshots
 -----------
 
 -   Homepage:
-![image](https://github.com/Ka1ma/NovaStock-Inventory-Management/assets/89065349/33b14925-bf14-4b8c-bbf6-92b11d6957c2)
+-   ![image](https://github.com/Ka1ma/NovaStock-Inventory-Management/assets/89065349/33b14925-bf14-4b8c-bbf6-92b11d6957c2)
 
 -   Add Item:
-![image](https://github.com/Ka1ma/NovaStock-Inventory-Management/assets/89065349/ee99bb40-bfe0-47d8-9453-0481e8c94028)
+-   ![image](https://github.com/Ka1ma/NovaStock-Inventory-Management/assets/89065349/ee99bb40-bfe0-47d8-9453-0481e8c94028)
 
 -   View Items:
-![image](https://github.com/Ka1ma/NovaStock-Inventory-Management/assets/89065349/2f6ef39b-25d3-4512-bf71-868e92f1a805)
+-   ![image](https://github.com/Ka1ma/NovaStock-Inventory-Management/assets/89065349/2f6ef39b-25d3-4512-bf71-868e92f1a805)
 
 Features
 --------
