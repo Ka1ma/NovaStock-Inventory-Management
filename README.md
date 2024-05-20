@@ -1,70 +1,93 @@
-# NovaStock Inventory Management
+NovaStock Inventory Management System
+=====================================
 
-NovaStock is a simple inventory management system developed as a project for the CC15 subject at Xavier University - Ateneo De Cagayan, College of Computer Studies. The subject is taught by Professor Wilbert Tan.
+NovaStock is a simple inventory management system built using Python and MySQL. It provides a user-friendly interface to add, view, delete, and reset items in the inventory.
 
-## Table of Contents
+Screenshots
+-----------
 
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributors](#contributors)
-- [License](#license)
+-   Homepage:
+![image](https://github.com/Ka1ma/NovaStock-Inventory-Management/assets/89065349/33b14925-bf14-4b8c-bbf6-92b11d6957c2)
 
-## Features
+-   Add Item:
+![image](https://github.com/Ka1ma/NovaStock-Inventory-Management/assets/89065349/ee99bb40-bfe0-47d8-9453-0481e8c94028)
 
-- Add items to the inventory with details such as name, quantity, and price.
-- View the list of items in the inventory with total items in stock.
-- Delete individual items from the inventory.
-- Reset all items in the inventory.
+-   View Items:
+![image](https://github.com/Ka1ma/NovaStock-Inventory-Management/assets/89065349/2f6ef39b-25d3-4512-bf71-868e92f1a805)
 
-## Installation
+Features
+--------
 
-To run NovaStock Inventory Management, follow these steps:
+-   Add new items to the inventory with name, quantity, and price details.
+-   View all items in the inventory along with their details.
+-   Delete individual items from the inventory.
+-   Reset the entire inventory.
 
-1. Install Python if you haven't already. You can download it from [python.org](https://www.python.org/downloads/).
-2. Install MySQL and set up a database. You can use XAMPP, WAMP, or any other MySQL server.
-3. Clone this repository to your local machine:
+Requirements
+------------
 
-    ```
-    git clone https://github.com/your-username/novastock.git
-    ```
+-   Python 3.x
+-   MySQL Server
+-   XAMPP (for local MySQL server)
 
-4. Navigate to the project directory:
+Installation
+------------
 
-    ```
-    cd novastock
-    ```
+1.  Clone the repository to your local machine:
 
-5. Install the required Python packages:
+    `git clone https://github.com/yourusername/novastock.git`
 
-    ```
-    pip install mysql-connector-python
-    ```
+2.  Install the required Python packages:
 
-## Usage
+    `pip install mysql-connector-python`
 
-1. Open the terminal or command prompt.
-2. Navigate to the project directory:
+Setup
+-----
 
-    ```
-    cd novastock
-    ```
+1.  Install and start XAMPP to run the local MySQL server.
 
-3. Run the `novastock.py` file:
+2.  Make sure you have MySQL server installed and running on your XAMPP.
 
-    ```
-    python novastock.py
-    ```
+3.  Create a new MySQL database for NovaStock:
 
-4. The NovaStock Inventory Management application GUI will open. You can now add, view, delete items, and reset the inventory.
+    `CREATE DATABASE inventory;`
 
-## Contributors
+4.  Import the provided SQL file `inventory.sql` to create the necessary table:
 
-- Mychal Q. Redoblado
-- Chloe Dela Cruz
-- James Bacas
-- CJ Alcantara
+    `mysql -u your_username -p inventory < inventory.sql`
 
-## License
+5.  Open the `novastock.py` file and replace the following values with your XAMPP MySQL server details:
 
-This project is licensed under [Xavier University - Ateneo De Cagayan, College Of Computer Studies](LICENSE).
+    `novastock = NovaStock(host="localhost", user="your_username", password="your_password", database="inventory")`
+
+Usage
+-----
+
+1.  Run the `novastock.py` file:
+
+    `python novastock.py`
+
+2.  The NovaStock GUI will open. You can then add, view, delete, or reset items in the inventory using the provided buttons.
+
+Authors
+-------
+
+-   Mychal Redoblado
+-   Chloe Dela Cruz
+-   James Bacas
+-   CJ Alcantara
+
+University
+----------
+
+Xavier University - Ateneo De Cagayan
+
+Department
+----------
+
+College of Computer Studies
+
+License
+-------
+
+Xavier University - Ateneo De Cagayan College of Computer Studies
