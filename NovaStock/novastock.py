@@ -89,21 +89,19 @@ class NovaStock:
 
         total_items = sum(row[2] for row in result)  # Calculate total number of items in stock
 
-        tk.Label(self.view_window, text=f"Total items in stock: {total_items}", bg="maroon", fg="orange").grid(row=0, column=0, columnspan=4, pady=5)
+        tk.Label(self.view_window, text=f"Total items in stock: {total_items}", bg="maroon", fg="orange").grid(row=0, column=0, columnspan=5, pady=5)
 
         # Display headers
-        headers = ["Name", "Quantity", "Price", ""]
+        headers = ["ID", "Name", "Quantity", "Price", ""]
         for col_index, header in enumerate(headers):
             tk.Label(self.view_window, text=header, font=("Helvetica", 10, "bold"), bg="maroon", fg="orange").grid(row=1, column=col_index, padx=5, pady=3)
 
         # Display item details
         for row_index, row in enumerate(result, start=2):
             for col_index, value in enumerate(row):
-                if col_index == 3:  # Add delete button in the last column
-                    delete_button = tk.Button(self.view_window, text="Delete", command=lambda r=row[0]: self.delete_item(r), bg="orange", fg="maroon")
-                    delete_button.grid(row=row_index, column=col_index)
-                else:
-                    tk.Label(self.view_window, text=value, bg="maroon", fg="orange").grid(row=row_index, column=col_index, padx=5, pady=3)
+                tk.Label(self.view_window, text=value, bg="maroon", fg="orange").grid(row=row_index, column=col_index, padx=5, pady=3)
+            delete_button = tk.Button(self.view_window, text="Delete", command=lambda r=row[0]: self.delete_item(r), bg="orange", fg="maroon")
+            delete_button.grid(row=row_index, column=4, padx=5, pady=3)
 
     def delete_item(self, item_id):
         if messagebox.askyesno("Confirmation", "Are you sure you want to delete this item?"):
@@ -111,6 +109,7 @@ class NovaStock:
             self.cursor.execute(sql, (item_id,))
             self.conn.commit()
             messagebox.showinfo("Success", "Item deleted successfully!")
+            self.view_window.destroy()
             self.view_items()
 
     def reset_items(self):
@@ -119,6 +118,7 @@ class NovaStock:
             self.cursor.execute(sql)
             self.conn.commit()
             messagebox.showinfo("Success", "All items have been reset!")
+            self.view_window.destroy()
             self.view_items()
 
     def close_connection(self):
