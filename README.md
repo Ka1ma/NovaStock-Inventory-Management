@@ -69,6 +69,10 @@ Usage
 
 2.  The NovaStock GUI will open. You can then add, view, delete, or reset items in the inventory using the provided buttons.
 
+Presentation Link
+-------
+https://www.canva.com/design/DAGFvIv3Zig/mm50GTGRHWCTzNHRfAxnVw/edit
+
 Authors
 -------
 
